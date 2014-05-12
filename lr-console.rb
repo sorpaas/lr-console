@@ -3,7 +3,7 @@ require 'io/console'
 puts "(lr-console"
 puts " (author . sorpaas)"
 puts " (version . v0.01)"
-puts ")"
+puts ")\033[1A"
 
 require 'heist'
 
@@ -26,6 +26,7 @@ while(true)
   end
   
   if line_content.strip == "exit"
+    puts "\n"
     break
   else
     puts scheme.eval "(#{line_content})"
