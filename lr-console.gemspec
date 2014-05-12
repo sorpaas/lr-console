@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'lr-console'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2014-05-12'
   s.summary     = "Yet another all-is-list scheme interpreter."
   s.description = "A scheme interpreter that treat all things as lists."
