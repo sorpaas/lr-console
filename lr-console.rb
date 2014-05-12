@@ -1,9 +1,11 @@
 require 'io/console'
-require 'heist'
 
 puts "(lr-console"
 puts " (author . sorpaas)"
 puts " (version . v0.01)"
+puts ")"
+
+require 'heist'
 
 scheme = Heist::Runtime.new
 
