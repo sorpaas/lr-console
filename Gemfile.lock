@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    heist (0.3.3)
+      oyster (>= 0.9)
+      treetop (>= 1.2)
+    oyster (0.9.5)
+    polyglot (0.3.4)
+    treetop (1.5.3)
+      polyglot (~> 0.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  heist
