@@ -14,14 +14,21 @@ scheme = Heist::Runtime.new
 while(true)
   #deal with a line
   line_content = ""
+  ignore_times = 0
   while(true)
     print "\n)\033[1A\033[0K\r(#{line_content})\b"
     next_char = STDIN.getch
     if next_char == "\r"
       puts
       break
+    elsif ignore_times != 0
+      ignore_times -= 1
+      next
     elsif next_char == "\u007F"
       line_content = line_content[0, line_content.length - 1]
+    elsif next_char == "\e"
+      ignore_times = 2
+      next
     else
       line_content += next_char
     end
